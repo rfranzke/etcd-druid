@@ -42,6 +42,8 @@ _Appears in:_
 | `deltaSnapshotRetentionPeriod` _[Duration](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.29/#duration-v1-meta)_ | DeltaSnapshotRetentionPeriod defines the duration for which delta snapshots will be retained, excluding the latest snapshot set.<br />The value should be a string formatted as a duration (e.g., '1s', '2m', '3h', '4d') |  | Pattern: `^([0-9]+([.][0-9]+)?h)?([0-9]+([.][0-9]+)?m)?([0-9]+([.][0-9]+)?s)?([0-9]+([.][0-9]+)?d)?$` <br />Type: string <br /> |
 | `compression` _[CompressionSpec](#compressionspec)_ | SnapshotCompression defines the specification for compression of Snapshots. |  |  |
 | `enableProfiling` _boolean_ | EnableProfiling defines if profiling should be enabled for the etcd-backup-restore-sidecar |  |  |
+| `enableMemberLeaseRenewal` _boolean_ | EnableMemberLeaseRenewal defines if member lease renewal should be enabled for the etcd-backup-restore-sidecar |  |  |
+| `enableSnapshotLeaseRenewal` _boolean_ | EnableSnapshotLeaseRenewal defines if snapshot lease renewal should be enabled for the etcd-backup-restore-sidecar |  |  |
 | `etcdSnapshotTimeout` _[Duration](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.29/#duration-v1-meta)_ | EtcdSnapshotTimeout defines the timeout duration for etcd FullSnapshot operation |  | Pattern: `^([0-9]+([.][0-9]+)?h)?([0-9]+([.][0-9]+)?m)?([0-9]+([.][0-9]+)?s)?([0-9]+([.][0-9]+)?d)?$` <br />Type: string <br /> |
 | `leaderElection` _[LeaderElectionSpec](#leaderelectionspec)_ | LeaderElection defines parameters related to the LeaderElection configuration. |  |  |
 

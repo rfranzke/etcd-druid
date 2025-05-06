@@ -504,6 +504,13 @@ func (b *stsBuilder) getBackupRestoreContainerCommandArgs() []string {
 		}
 	}
 
+	if v := b.etcd.Spec.Backup.EnableMemberLeaseRenewal; v != nil {
+		commandArgs = append(commandArgs, fmt.Sprintf("--enable-member-lease-renewal=%t", *v))
+	}
+	if v := b.etcd.Spec.Backup.EnableSnapshotLeaseRenewal; v != nil {
+		commandArgs = append(commandArgs, fmt.Sprintf("--enable-snapshot-lease-renewal=%t", *v))
+	}
+
 	return commandArgs
 }
 

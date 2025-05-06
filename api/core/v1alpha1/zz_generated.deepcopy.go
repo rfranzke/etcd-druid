@@ -92,6 +92,16 @@ func (in *BackupSpec) DeepCopyInto(out *BackupSpec) {
 		*out = new(bool)
 		**out = **in
 	}
+	if in.EnableMemberLeaseRenewal != nil {
+		in, out := &in.EnableMemberLeaseRenewal, &out.EnableMemberLeaseRenewal
+		*out = new(bool)
+		**out = **in
+	}
+	if in.EnableSnapshotLeaseRenewal != nil {
+		in, out := &in.EnableSnapshotLeaseRenewal, &out.EnableSnapshotLeaseRenewal
+		*out = new(bool)
+		**out = **in
+	}
 	if in.EtcdSnapshotTimeout != nil {
 		in, out := &in.EtcdSnapshotTimeout, &out.EtcdSnapshotTimeout
 		*out = new(metav1.Duration)

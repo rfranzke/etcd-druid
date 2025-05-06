@@ -188,6 +188,12 @@ type BackupSpec struct {
 	// EnableProfiling defines if profiling should be enabled for the etcd-backup-restore-sidecar
 	// +optional
 	EnableProfiling *bool `json:"enableProfiling,omitempty"`
+	// EnableMemberLeaseRenewal defines if member lease renewal should be enabled for the etcd-backup-restore-sidecar
+	// +optional
+	EnableMemberLeaseRenewal *bool `json:"enableMemberLeaseRenewal,omitempty"`
+	// EnableSnapshotLeaseRenewal defines if snapshot lease renewal should be enabled for the etcd-backup-restore-sidecar
+	// +optional
+	EnableSnapshotLeaseRenewal *bool `json:"enableSnapshotLeaseRenewal,omitempty"`
 	// EtcdSnapshotTimeout defines the timeout duration for etcd FullSnapshot operation
 	// +optional
 	// +kubebuilder:validation:Type=string
